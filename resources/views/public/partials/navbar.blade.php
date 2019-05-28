@@ -41,7 +41,7 @@
 					<a class="nav-link btn btn-outline-info" data-value="contact" href="#contact">Contact</a>
 				</li> 
 				<li class="nav-item"> 
-				    <a class="nav-link btn btn-outline-info" data-value="blog" href="#">Blog</a>
+				    <a class="nav-link btn btn-outline-info" data-value="blog" href="{{url('/blog')}}">Blog</a>
 				</li>
 			</ul> 
 

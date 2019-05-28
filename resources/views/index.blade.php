@@ -45,8 +45,8 @@
 						      	<img class="d-block w-100 " src="https://www.gla.ac.uk/media/media_618814_en.jpg" alt="Second slide">
 
 								<div class="carousel-caption">
-									<h1>Post Title</h1>
-									<p>Description of the post</p>
+									<h1>Zahin Razeen and his thirst for change</h1>
+									<p>Since starting working with Footsteps, a social enterprise in Bangladesh, at the age of 16, I’ve heavily advocated many of the UN’s Sustainable Development Goals, including number six – clean water and sanitation</p>
 									<p style="float: right">Posted On: 23/05/2019</p>
 								</div>
 
@@ -61,8 +61,8 @@
 						      	<img class="d-block w-100 "  src="https://www.oneyoungworld.com/sites/oneyoungworld.com/files/images/family-ottawa-Copy.jpg" alt="Second slide">
 
 								<div class="carousel-caption">
-									<h1>Post Title</h1>
-									<p>Description of the post</p>
+									<h1>FUTURE WORLD CHANGERS - Razeen</h1>
+									<p>A total of 71% of the Earth is covered with water bodies, but only 0.08% is available for human consumption. Recent research has shown that the cost of water production and purification has risen by 400% in comparison to other commodities in the last 3 decades and so has global demand by almost 48% due to pressure exerted by the industrial and agricultural sectors. Meanwhile, the USA and the UK are estimated to have lost 4.8 trillion litres of clean treated water, collectively worth $600 billion, as a result of pipe leakages and multiple factors. This lost quantity would be enough to support 20 million people for an entire year.</p>
 									<p style="float: right">Posted On: 23/05/2019</p>
 								</div>
 
@@ -150,7 +150,7 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
 				
-				<img src="{{ url('/image/achievements/one_young_world.jpg') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/achievements/one_young_world.png') }}" class="mx-auto d-block">
 
 				
 			</div>
