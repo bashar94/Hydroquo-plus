@@ -33,6 +33,7 @@
 
 		<div class="container mt--9 pb-5">
 		        <div class="row justify-content-center">
+		            <div class="col-lg-12 col-md-12">
 	                
 		                <div id="carouselIndex" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
@@ -41,7 +42,7 @@
 						    	<div class="overlay">
 						    	</div>
 						    	
-						      	<img class="d-block w-100 "  src="https://www.gla.ac.uk/media/media_618814_en.jpg" alt="Second slide">
+						      	<img class="d-block w-100 " src="https://www.gla.ac.uk/media/media_618814_en.jpg" alt="Second slide">
 
 								<div class="carousel-caption">
 									<h1>Post Title</h1>
@@ -57,7 +58,7 @@
 						    	<div class="overlay">
 						    	</div>
 						    	
-						      	<img class="d-block w-100 " src="https://www.oneyoungworld.com/sites/oneyoungworld.com/files/images/family-ottawa-Copy.jpg" alt="Second slide">
+						      	<img class="d-block w-100 "  src="https://www.oneyoungworld.com/sites/oneyoungworld.com/files/images/family-ottawa-Copy.jpg" alt="Second slide">
 
 								<div class="carousel-caption">
 									<h1>Post Title</h1>
@@ -81,6 +82,10 @@
 						    <span class="sr-only">Next</span>
 						  </a>
 						</div>
+
+	                
+
+	            </div>
 	        </div>
 	    </div>
 
@@ -140,6 +145,28 @@
 	<hr>
 
 	<h1 class="text-center">Achievements</h1>
+
+	
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 ">
+				
+				<img src="{{ url('/image/achievements/one_young_world.jpg') }}" class="mx-auto d-block">
+
+				
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 ">
+				<img src="{{ url('/image/achievements/converge.jpg') }}" class="mx-auto d-block">
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 ">
+				<img src="{{ url('/image/achievements/FFactornationalfinal.jpg') }}" class="mx-auto d-block">
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 ">
+				<img src="{{ url('/image/achievements/GESsummit.png') }}" class="mx-auto d-block">
+			</div>
+		</div>	
+	
+
+	
 </section>
 	
 @endsection
