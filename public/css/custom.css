@@ -42,10 +42,16 @@ header{
 	border-radius: 15px;
 }
 
+@media (max-width: 576px) {
+	.carousel-item img{
+	 	height: 60vw;
+	}
+}
+
 
 @media (min-width: 768px) {
 	 .carousel-item img{
-	 	min-height: 500px;
+	 	height: 30vw;
 	 }
 
 	 .about img{

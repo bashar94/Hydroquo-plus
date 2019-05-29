@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'LandingPageController@index');
+
+Route::get('/blog', 'BlogController@index');
+
+Route::get('/blog/{id}/{slug}', 'BlogController@view');
+
+
+
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');

@@ -5,7 +5,7 @@
 <nav class="navbar navbar-top navbar-horizontal fixed-top shadow-sm navbar-expand-md navbar-light bg-white">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ url('/image/logo.png') }}" class="d-inline-block nav-logo align-center" height="50px" alt="">
-            &nbsp;Hydroquo +
+            &nbsp;Hydroquo+
         </a>
 
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
                     <div class="col-6 collapse-brand">
                         <a href="{{ route('home') }}">
                             <img src="{{ url('/image/logo.png') }}">
-                             &nbsp;Hydroquo +
+                             &nbsp;Hydroquo+
                         </a>
                     </div>
                     <div class="col-6 collapse-close">

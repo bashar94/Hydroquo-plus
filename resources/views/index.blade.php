@@ -1,6 +1,6 @@
 @extends('public.master')
 
-@section('title', 'Index')
+@section('title', 'Hydroquo+')
 
 
 @section('css')
@@ -37,39 +37,28 @@
 	                
 		                <div id="carouselIndex" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
+
+
+						  	@foreach ($posts as $key=>$post)
 						    
-						    <div class="carousel-item active">
+						    <div class="carousel-item @if ($key == 0) active @endif">
 						    	<div class="overlay">
 						    	</div>
 						    	
-						      	<img class="d-block w-100 " src="https://www.gla.ac.uk/media/media_618814_en.jpg" alt="Second slide">
+						      	<img class="d-block w-100 " src="{{ url('/image/feature_photos/'.$post->featured_photo) }}" alt="Second slide">
 
 								<div class="carousel-caption">
-									<h1>Zahin Razeen and his thirst for change</h1>
-									<p>Since starting working with Footsteps, a social enterprise in Bangladesh, at the age of 16, I’ve heavily advocated many of the UN’s Sustainable Development Goals, including number six – clean water and sanitation</p>
-									<p style="float: right">Posted On: 23/05/2019</p>
+									<a href="{{ url('blog/'.$post->id.'/'.$post->slug) }}"> <h1>{{ $post->title }}</h1></a>
+									<p class="d-none d-sm-none d-md-block d-lg-block d-xl-block">{{ substr($post->description, 0, 150).'...' }} <a href="{{ url('blog/'.$post->id.'/'.$post->slug) }}">Read More</a></p>
+									<p style="float: right">{{ date("F j, Y, g:i a", strtotime($post->created_at)) }}</p>
 								</div>
 
 
 
 						    </div>
 
-						    <div class="carousel-item">
-						    	<div class="overlay">
-						    	</div>
-						    	
-						      	<img class="d-block w-100 "  src="https://www.oneyoungworld.com/sites/oneyoungworld.com/files/images/family-ottawa-Copy.jpg" alt="Second slide">
-
-								<div class="carousel-caption">
-									<h1>FUTURE WORLD CHANGERS - Razeen</h1>
-									<p>A total of 71% of the Earth is covered with water bodies, but only 0.08% is available for human consumption. Recent research has shown that the cost of water production and purification has risen by 400% in comparison to other commodities in the last 3 decades and so has global demand by almost 48% due to pressure exerted by the industrial and agricultural sectors. Meanwhile, the USA and the UK are estimated to have lost 4.8 trillion litres of clean treated water, collectively worth $600 billion, as a result of pipe leakages and multiple factors. This lost quantity would be enough to support 20 million people for an entire year.</p>
-									<p style="float: right">Posted On: 23/05/2019</p>
-								</div>
-
-
-
-						    </div>
 						    
+						    @endforeach
 						   
 						  </div>
 
@@ -126,18 +115,18 @@
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
 				<!-- <div class="circle">
 				<div class="wave"></div> -->
-				<img src="{{ url('/image/partners1.png') }}" class="mx-auto d-block" width="250px">
+				<img src="{{ url('/image/partners/partners1.png') }}" class="mx-auto d-block" width="250px">
 
 				
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners2.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners2.png') }}" class="mx-auto d-block">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners3.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners3.png') }}" class="mx-auto d-block">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners4.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners4.png') }}" class="mx-auto d-block">
 			</div>
 		</div>	
 	</div>
