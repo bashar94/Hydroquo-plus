@@ -110,26 +110,26 @@
 <!-- our partners -->
 <section id="partners" class="partners">
 	<h1 class="text-center">Our Partners</h1>
-	<div class="container">
+	
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
 				<!-- <div class="circle">
 				<div class="wave"></div> -->
-				<img src="{{ url('/image/partners/partners1.png') }}" class="mx-auto d-block" width="250px">
+				<img src="{{ url('/image/partners/partners1.png') }}" class="mx-auto d-block" height="125px" width="250px">
 
 				
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners2.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners2.png') }}" class="mx-auto d-block" height="130px" width="200px">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners3.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners3.png') }}" class="mx-auto d-block" height="135px" width="125px">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners4.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/partners/partners4.png') }}" class="mx-auto d-block" height="125px" width="250px">
 			</div>
 		</div>	
-	</div>
+
 
 	<hr>
 
@@ -137,20 +137,20 @@
 
 	
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
+			<div class="col-lg-3 col-md-3 col-sm-6 mb-2 ">
 				
-				<img src="{{ url('/image/achievements/one_young_world.png') }}" class="mx-auto d-block">
+				<img src="{{ url('/image/achievements/one_young_world.png') }}" class="mx-auto d-block" height="200px" width="300px">
 
 				
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/achievements/converge.jpg') }}" class="mx-auto d-block">
+			<div class="col-lg-3 col-md-3 col-sm-6 mb-2">
+				<img src="{{ url('/image/achievements/converge.jpg') }}" class="mx-auto d-block" height="200px" width="300px">
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/achievements/FFactornationalfinal.jpg') }}" class="mx-auto d-block">
+			<div class="col-lg-3 col-md-3 col-sm-6 mb-2">
+				<img src="{{ url('/image/achievements/FFactornationalfinal.jpg') }}" class="mx-auto d-block" height="200px" width="300px">
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/achievements/GESsummit.png') }}" class="mx-auto d-block">
+			<div class="col-lg-3 col-md-3 col-sm-6 mb-2">
+				<img src="{{ url('/image/achievements/GESsummit.png') }}" class="mx-auto d-block" height="200px" width="300px">
 			</div>
 		</div>	
 	

@@ -27,6 +27,15 @@ header{
   
 }
 
+.embed-responsive iframe{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+}
+
 
 
 .overlay {
@@ -116,9 +125,10 @@ h1{
 	color:#3490dc;
 	margin: 2em; 
 }
-.partners img{
-	height: 150px;
-}
+/*.partners img{
+	width: 300px;
+	height: 200px;
+}*/
 /*partners part style*/
 
 /*contact part style*/
