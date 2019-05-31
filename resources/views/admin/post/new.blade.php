@@ -54,8 +54,8 @@
             spellChecker: true,
             tabSize: 4,
             });
-            //simplemde.options.previewRender(
-        simplemde.value(@json($post->body));
+
+        //$('#editor').wrapInner(simplemde.options.previewRender(simplemde.value()));
     </script>
 
 @endpush

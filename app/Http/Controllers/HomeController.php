@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 class HomeController extends Controller
 {
     /**
@@ -19,8 +21,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index()     
     {
-        return view('dashboard');
+        $posts =  DB::table('blog_post')->orderBy('id', 'DESC')->limit(5)->get();
+        return view('dashboard')->with('posts', $posts);
     }
 }

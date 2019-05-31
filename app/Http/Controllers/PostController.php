@@ -3,42 +3,43 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileRequest;
-use App\Http\Requests\PasswordRequest;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
 
 class PostController extends Controller
 {
     /**
-     * Show the editor for editing posts.
+     * view all posts
      *
      * @return \Illuminate\View\View
      */
-    public function post()
+    public function viewAllPosts()
     {
-        return view('admin.post.posts');
+
+        $posts =  DB::table('blog_post')->orderBy('id', 'DESC')->paginate(10);
+        return view('admin.post.posts')->with('posts', $posts);
     }
 
     /**
-     * Show the editor for editing posts.
+     * add new post
      *
      * @return \Illuminate\View\View
      */
-    public function edit()
+    public function newPosts()
     {
-        return view('admin.post.edit');
+        return view('admin.post.new');
     }
 
-    /**
-     * Update post
-     *
-     * @param  \App\Http\Requests\ProfileRequest  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function update(ProfileRequest $request)
+   
+    public function editPost(Request $request)
     {
-        
-
-        return back()->withStatus(__('Profile successfully updated.'));
+        $post_id = $request->id;
+        $post =  DB::table('blog_post')->find($post_id);
+        return view('admin.post.edit')->with('post', $post);
     }
+
+    
 
 }

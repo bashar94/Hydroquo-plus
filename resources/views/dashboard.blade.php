@@ -75,7 +75,7 @@
                                 <h3 class="mb-0">Recent Posts</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <a href="{{ route('posts') }}" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
@@ -85,48 +85,33 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Title</th>
-                                    <th scope="col">Body</th>
+                                    <th scope="col">Author</th>
                                     <th scope="col">Post Date</th>
                                     
                                 </tr>
                             </thead>
                             <tbody>
+                                 @foreach ($posts as $post)
                                 <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm"><a href="{{ url('blog/'.$post->id.'/'.$post->slug) }}" target="_blank">{{ $post->title }}</a></span>
+                                            </div>
+                                        </div>
+                                    </th>
+
+                                    <td>
+                                        Razeen
+                                    </td>
+
+                                    <td>
+                                       {{ date("F j, Y, g:i a", strtotime($post->created_at)) }}
+                                    </td>
                                     
                                 </tr>
-                                <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">Example Post Title</th>
-                                    <td> Example body text here</td>
-                                    <td> 27th May, 2019</td>
-                                    
-                                </tr>
+                            @endforeach
+                                
                             </tbody>
                         </table>
                     </div>
@@ -170,7 +155,7 @@
             </div>
         </div>
 
-        @include('admin.layouts.footers.auth')
+       <!--  @include('admin.layouts.footers.auth') -->
     </div>
 @endsection
 

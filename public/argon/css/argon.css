@@ -5146,7 +5146,7 @@ input[type='button'].btn-block
 .nav-link
 {
     display: block;
-
+    margin-right: 2em !important;
     padding: .25rem .75rem;
 }
 .nav-link:hover,

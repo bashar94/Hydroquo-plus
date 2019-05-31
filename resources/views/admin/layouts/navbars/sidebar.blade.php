@@ -86,16 +86,16 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.post.posts') }}">
+                    <a class="nav-link" href="{{ route('posts') }}">
                         <i class="fas fa-newspaper" style="color: #11cdef;"></i>
                         <span class="nav-link-text" style="color: #11cdef;">{{ __('All Posts') }}</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.post.edit') }}">
+                    <a class="nav-link" href="{{ route('new') }}">
                         <i class="fas fa-edit" style="color: #2dce89;"></i> 
-                        <span class="nav-link-text" style="color: #2dce89;">{{ __('Edit Posts') }}</span>
+                        <span class="nav-link-text" style="color: #2dce89;">{{ __('New Post') }}</span>
                     </a>
                 </li>
 

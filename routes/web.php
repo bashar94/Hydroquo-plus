@@ -19,6 +19,9 @@ Route::get('/blog/{id}/{slug}', 'BlogController@view');
 
 
 
+
+
+
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
@@ -31,9 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::resource('user', 'UserController', ['except' => ['show']]);
-	Route::get('post', ['as' => 'admin.post.edit', 'uses' => 'PostController@edit']);
-	Route::put('post/update', ['as' => 'admin.post.update', 'uses' => 'PostController@update']);
-	Route::put('post', ['as' => 'admin.post.posts', 'uses' => 'ProfileController@post']);
+	Route::get('dashboard/new', 'PostController@newPosts')->name('new');
+	Route::get('dashboard/posts', 'PostController@viewAllPosts')->name('posts');
+	Route::get('dashboard/edit/{id}', 'PostController@editPost')->name('edit');
 });
-
