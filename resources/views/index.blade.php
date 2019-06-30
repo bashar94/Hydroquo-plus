@@ -4,7 +4,22 @@
 
 
 @section('css')
+<style type="text/css">
+	.scroller {
+	  height: 400px;
+	  width: 100%;
+	  overflow: hidden;
+	}
 
+	.scroller li {
+	  margin-left: 20px;
+	  float: left;
+	  margin-top: 100px;
+	  list-style: none;
+	}
+	
+</style>
+	
 @endsection
 
 
@@ -89,8 +104,8 @@
 
 	<section id="about" class="about">
 		<div class="row">
-		   <div class="col-lg-4 col-md-4 col-sm-12">
-		    <img src="{{ url('/image/logo.png') }}" height="600px" class="mx-auto d-block">
+		   <div class="col-lg-4 col-md-12">
+		    <img src="{{ url('/image/logo.png') }}" class="mx-auto d-block">
 		    
 		   </div>
 		   <div class="col-lg-8 col-md-8 col-sm-12 desc">
@@ -111,24 +126,23 @@
 <section id="partners" class="partners">
 	<h1 class="text-center">Our Partners</h1>
 	
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<!-- <div class="circle">
-				<div class="wave"></div> -->
-				<img src="{{ url('/image/partners/partners1.png') }}" class="mx-auto d-block" height="125px" width="250px">
-
-				
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners2.png') }}" class="mx-auto d-block" height="130px" width="200px">
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners3.png') }}" class="mx-auto d-block" height="135px" width="125px">
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 ">
-				<img src="{{ url('/image/partners/partners4.png') }}" class="mx-auto d-block" height="125px" width="250px">
-			</div>
-		</div>	
+	<div class="row align-items-center">
+		<div class="col-lg-2 col-md-2 col-sm-6 offset-md-1 offset-lg-1">
+			<img src="{{ url('/image/partners/partners1.png') }}" class="mx-auto d-block">
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 ">
+			<img style="height: 120px"  src="{{ url('/image/partners/partners2.png') }}" class="mx-auto d-block" >
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 ">
+			<img style="height: 120px" src="{{ url('/image/partners/partners3.png') }}" class="mx-auto d-block" >
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 ">
+			<img style="width: 200px" src="{{ url('/image/partners/partners4.png') }}" class="mx-auto d-block" >
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-6 ">
+			<img style="width: 200px" src="{{ url('/image/partners/partners5.png') }}" class="mx-auto d-block" >
+		</div>
+	</div>	
 
 
 	<hr>
@@ -136,7 +150,7 @@
 	<h1 class="text-center">Achievements</h1>
 
 	
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-6 mb-2 ">
 				
 				<img src="{{ url('/image/achievements/one_young_world.png') }}" class="mx-auto d-block" height="200px" width="300px">
@@ -152,7 +166,19 @@
 			<div class="col-lg-3 col-md-3 col-sm-6 mb-2">
 				<img src="{{ url('/image/achievements/GESsummit.png') }}" class="mx-auto d-block" height="200px" width="300px">
 			</div>
-		</div>	
+		</div>	 -->
+
+	<div class="scroller" id="scroller">
+	  <ul>
+	    <li><img src="{{ url('/image/achievements/one_young_world.png') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/converge.jpg') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/FFactornationalfinal.jpg') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/GESsummit.png') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/sie.jpg') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/resolution_project.jpg') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	    <li><img src="{{ url('/image/achievements/glasgow.png') }}" class="mx-auto d-block" height="200px" width="300px"></li>
+	  </ul>
+	</div>
 	
 
 	
@@ -162,15 +188,60 @@
 
 
 @section('javascript')
+<script src="{{ url('/js/scrollForever.min.js') }}"></script>
+	
+
+
 <script type="text/javascript">
-	// $(document).ready(function(){
-	//  $('.header').height($(window).height());
-	// })
+	$("#scroller").scrollForever();
+
+	$("#scroller").scrollForever({
+		// distance between slides
+		placeholder: 0,
+
+		// scroll direction. left or top
+		dir: 'left',
+
+		// container element
+		container: 'ul',
+
+		// inner element
+		inner: 'li',
+
+		// animation speed
+		speed: 1000,
+
+		// slide interval
+		delayTime: 0,
+
+		// continuous scroll
+		continuous: true,
+
+		// how many slides to slide at a time
+		num: 5
+	});
+
 
 	$('#carouselIndex').carousel({
 	  interval: 3000,
 	  cycle: true
 	}); 
+
+	$('a[href*="#"]').on('click', function(e) {
+
+		if($(this).attr('href') != '#carouselIndex'){
+			e.preventDefault()
+
+			$('html, body').animate(
+			{
+			  scrollTop: $($(this).attr('href')).offset().top,
+			},
+			100,
+			'linear'
+			)
+
+		}
+	})
 </script>
 
 

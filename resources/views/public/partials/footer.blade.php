@@ -11,7 +11,7 @@
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
           <!-- <h3 class="mb-0">Get connected with us on social networks!</h3> -->
           <p><i class="fas fa-home mr-3"></i> Dhaka, Bangladesh</p>
-          <p><i class="fas fa-envelope mr-3"></i> info@hydroquo.com</p>
+          <p><i class="fas fa-envelope mr-3"></i> zahinrazeen@hudroquo.org</p>
           <p><i class="fas fa-phone mr-3"></i> +880 1754379761</p>
         </div>
         <!-- Grid column -->
